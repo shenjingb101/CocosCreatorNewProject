@@ -44,8 +44,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.5689453125,
-      "y": 0.5689453125,
+      "x": 0.5689208984375,
+      "y": 0.5689208984375,
       "z": 1
     },
     "_quat": {
@@ -857,12 +857,12 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
+      "x": 0,
       "y": 0.5
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -302,
+      "x": -392,
       "y": 267,
       "z": 0
     },
@@ -923,9 +923,9 @@
     "_enabled": true,
     "alignMode": 1,
     "_target": null,
-    "_alignFlags": 45,
-    "_left": 166.875,
-    "_right": 770.875,
+    "_alignFlags": 8,
+    "_left": 88,
+    "_right": 914.83,
     "_top": 33,
     "_bottom": 567,
     "_verticalCenter": 0,

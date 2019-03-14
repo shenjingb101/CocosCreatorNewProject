@@ -121,6 +121,7 @@ cc.Class({
         this.players.stopAllActions(); //停止 player 节点的跳跃动作
         cc.director.loadScene('gameOver');
     },
+  
     ff:function (num,n){
         return parseInt(num*Math.pow(10,n)+0.5,10)/Math.pow(10,n);
     }
