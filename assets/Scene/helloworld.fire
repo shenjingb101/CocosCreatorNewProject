@@ -17,7 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 24
+        "__id__": 25
       }
     ],
     "_active": false,
@@ -44,8 +44,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.5689208984375,
-      "y": 0.5689208984375,
+      "x": 0.5689453125,
+      "y": 0.5689453125,
       "z": 1
     },
     "_quat": {
@@ -97,10 +97,10 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 22
+        "__id__": 23
       },
       {
-        "__id__": 23
+        "__id__": 24
       }
     ],
     "_prefab": null,
@@ -836,6 +836,9 @@
     "_components": [
       {
         "__id__": 21
+      },
+      {
+        "__id__": 22
       }
     ],
     "_prefab": null,
@@ -911,6 +914,33 @@
     "_id": "f8cJ0zt7tLypHfp+LUoTGL"
   },
   {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 20
+    },
+    "_enabled": true,
+    "alignMode": 1,
+    "_target": null,
+    "_alignFlags": 45,
+    "_left": 166.875,
+    "_right": 770.875,
+    "_top": 33,
+    "_bottom": 567,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 22.25,
+    "_originalHeight": 40,
+    "_id": "d5ZKAQQOZKmrB51mcz7zpH"
+  },
+  {
     "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,
@@ -963,7 +993,7 @@
     },
     "_children": [
       {
-        "__id__": 25
+        "__id__": 26
       }
     ],
     "_active": false,
@@ -1020,17 +1050,17 @@
     "_name": "PurpleMonster",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 24
+      "__id__": 25
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 26
+        "__id__": 27
       },
       {
-        "__id__": 27
+        "__id__": 28
       }
     ],
     "_prefab": null,
@@ -1084,7 +1114,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 25
+      "__id__": 26
     },
     "_enabled": true,
     "_srcBlendFactor": 770,
@@ -1112,7 +1142,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 25
+      "__id__": 26
     },
     "_enabled": true,
     "jumpHeight": 250,

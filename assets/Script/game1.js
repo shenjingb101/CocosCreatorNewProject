@@ -61,6 +61,7 @@ cc.Class({
         var endv2 = v.sub(cc.v2(5, 5), v1);  //v1无效，只有第一个参数有效
         console.log(endv2)
         console.log(cc.js.formatStr("a: %s, b: %s", 11, 22))
+        
     },
     gainScore: function () {
         this.score += 1;
@@ -106,12 +107,14 @@ cc.Class({
     update: function (dt) {
         // 每帧更新计时器，超过限度还没有生成新的星星
         // 就会调用游戏失败逻辑
-        if (this.timer > this.starDuration) {
+        if (this.timer * 0.01 > this.starDuration) {
             this.gameOver();
             return;
         }
-        this.timer += dt;
-        this.timeDisplay.string = cc.js.formatStr("%2d", this.timer)
+        this.timer += 1;
+        // console.log(this.timer,this.timer/100)
+        this.timeDisplay.string =this.timer /100 //使用*0.01会出现精度问题
+        
     },
 
     gameOver: function () {
