@@ -29,24 +29,17 @@ cc.Class({
         // 根据 player 节点位置判断距离
         var playerPos = this.game.players.getPosition();
         // 根据两点位置计算两点之间距离
-        var dist = this.node.position.sub(playerPos).mag();
+        var dist = this.node.position.sub(playerPos).mag();//矢量计算
         var starPos =  this.node.position;
-
-        // var dis_x = (playerPos.x-starPos.x);
-        // var dis_y = (playerPos.y-starPos.y);
-        // cc.log(dis_x,dis_y);
-        // dis_x = dis_x>0?dis_x:-dis_x;
-        // dis_y = dis_y>0?dis_y:-dis_y;
-        // var dist = 100;
-        // if (dis_x <=10,dis_y <=10){
-        //     dist = 0;
-        // }
+        // console.log(dist)
         return dist;
     },
 
     onPicked: function() {
         // 当星星被收集时，调用 Game 脚本中的接口，生成一个新的星星
         this.game.spawnNewStar();
+        // 调用 Game 脚本的得分方法
+        this.game.gainScore();
         // 然后销毁当前星星节点
         this.node.destroy();
     },
