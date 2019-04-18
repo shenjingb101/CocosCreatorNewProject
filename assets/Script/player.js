@@ -49,7 +49,21 @@ cc.Class({
         var fun = cc.callFunc(this.wxTouchFun,this);
         return cc.repeatForever(cc.sequence(jumpUp, jumpDown,fun));
     },
-
+    onLeftButton(evnet){
+        console.log("left",evnet)
+        this.direction = -2//方向
+        if  (this.direction > 0){
+            this.xSpeed = 0;
+        }
+    },
+    onRightButton: function(evnet){
+        console.log("right",evnet)
+        this.direction = 2//方向
+        if  (this.direction < 0){
+            this.xSpeed = 0;
+        }
+        
+    },
     onKeyDown (event) {
         // set a flag when key pressed
         switch(event.keyCode) {
@@ -87,7 +101,7 @@ cc.Class({
         this.accRight = false;
         // 主角当前水平方向速度
         this.xSpeed = 0;
-
+        this.direction = 0//方向
         // 初始化键盘输入监听
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);   
@@ -106,6 +120,15 @@ cc.Class({
         } else if (this.accRight) {
             this.xSpeed += this.accel * dt;
         }
+        if ( this.direction < 0) {
+            this.xSpeed -= this.accel * dt
+            this.direction ++
+
+        } else if (this.direction > 0) {
+            this.xSpeed += this.accel * dt
+            this.direction --
+        }
+
         // 限制主角的速度不能超过最大值
         if ( Math.abs(this.xSpeed) > this.maxMoveSpeed ) {
             // if speed reach limit, use max speed with current direction
